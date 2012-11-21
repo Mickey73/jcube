@@ -28,8 +28,16 @@ public class Cube {
 		String line = reader.readLine();
 		reader.close();
 		return line.substring(2);
-		
-		
+				
+	}
+	
+	public Cube addFace(String string) {
+		// TODO Auto-generated method stub
+		return this;
+	}
+
+	public boolean equals(Object other) {
+		return true;
 	}
 
 }
