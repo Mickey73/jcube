@@ -25,7 +25,6 @@ public class Cube {
 
 	public String titreFace(int i) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(new File(nomDuFichier)));
-
 		String line = reader.readLine();
 		reader.close();
 		return line.substring(2);
