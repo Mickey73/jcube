@@ -7,11 +7,16 @@ import java.io.IOException;
 
 public class Cube {
 	
-	static String nomDuFichier;
+	private String nomDuFichier;
+	
+	public void setNomDuFichier(String nomDuFichier) {
+		this.nomDuFichier = nomDuFichier;
+	}
 		
 	public static Cube fromTextFile(String string) {
-		nomDuFichier = string;
-		return new Cube();
+		Cube cube = new Cube();
+		cube.setNomDuFichier(string);
+		return cube;
 	}
 
 	public Integer numberOfFace() {
