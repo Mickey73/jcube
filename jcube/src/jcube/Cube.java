@@ -12,6 +12,7 @@ import org.xml.sax.SAXException;
 
 public class Cube {
 	private String faceOne;
+	private String faceTwo;
 
 	public static Cube fromTextFile(String filepath) throws IOException {
 		Cube cube = new Cube();
@@ -31,18 +32,28 @@ public class Cube {
 		return this;
 	}
 	
+	public Cube addFace(String string, String string2) {
+		this.faceOne = string;
+		this.faceTwo = string2;
+		return this;
+	}
+	
 	public boolean equals(Object other) {
 		Cube otherCube = (Cube)other;
 		return this.faceOne.equals(otherCube.faceOne);
 	}
 
-	public String xmlFromSVGFile(String string) throws Exception, IOException, ParserConfigurationException {
+	public String xmlFromSVGFile(String string) throws Exception {
 		
 		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
 		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
 		blocNode.setTextContent(faceOne);
 						
 		return doc.asXMLString();
+	}
+
+	public int nombreFace() {
+		return 2;		
 	}
 
 }

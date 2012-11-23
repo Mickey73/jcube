@@ -20,7 +20,7 @@ public class CubeEqualityTest {
 	}
 	
 	@Test
-	public void cubeAvecTexte() throws IOException, ParserConfigurationException, Exception{
+	public void cubeAvecTexte() throws Exception{
 		Cube cubeTest = (new Cube()).addFace("Comment sortir du cours plus tot");
 		
 		String xml = cubeTest.xmlFromSVGFile("templates/cube.svg");
@@ -28,7 +28,13 @@ public class CubeEqualityTest {
 		XMLDocument readCubeXML =(new XMLDocument()).loadXMLString(xml);
 		assertTrue(readCubeXML.match("//tspan[contains(text(),\"Comment sortir du cours plus tot\")]"));
 				
-
 	}
 
+	@Test
+	public void unCubeAvecDeuxFaces() throws Exception {
+		Cube cubeDoubleFace = (new Cube()).addFace("Test1", "Test2");
+		
+		assertEquals(cubeDoubleFace.nombreFace(), 2);
+		
+	}
 }
