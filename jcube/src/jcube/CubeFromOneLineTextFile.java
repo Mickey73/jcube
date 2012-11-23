@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CubeFromOneLineTextFile {	
+	
 	@Test
 	public void cubeShouldBeOneFaceWithCommentSortirDuCoursPlusTot() throws IOException {
 		Cube expectedCube = (new Cube())
@@ -16,4 +17,6 @@ public class CubeFromOneLineTextFile {
 		Cube actualCube = Cube.fromTextFile("templates/one-line-cube.txt");		
 		assertEquals(expectedCube, actualCube);
 	}
+	
+	
 }
