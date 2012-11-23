@@ -12,7 +12,7 @@ import org.xml.sax.SAXException;
 
 public class Cube {
 	private String faceOne;
-	private String faceTwo;
+
 
 	public static Cube fromTextFile(String filepath) throws IOException {
 		Cube cube = new Cube();
@@ -31,13 +31,7 @@ public class Cube {
 		this.faceOne = string;
 		return this;
 	}
-	
-	public Cube addFace(String string, String string2) {
-		this.faceOne = string;
-		this.faceTwo = string2;
-		return this;
-	}
-	
+
 	public boolean equals(Object other) {
 		Cube otherCube = (Cube)other;
 		return this.faceOne.equals(otherCube.faceOne);
@@ -50,10 +44,6 @@ public class Cube {
 		blocNode.setTextContent(faceOne);
 						
 		return doc.asXMLString();
-	}
-
-	public int nombreFace() {
-		return 2;		
 	}
 
 }

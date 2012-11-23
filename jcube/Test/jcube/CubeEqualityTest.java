@@ -18,23 +18,11 @@ public class CubeEqualityTest {
 		Cube cubeSVN = (new Cube()).addFace("SVN");
 		assertFalse(cubeGit.equals(cubeSVN));
 	}
-	
-	@Test
-	public void cubeAvecTexte() throws Exception{
-		Cube cubeTest = (new Cube()).addFace("Comment sortir du cours plus tot");
-		
-		String xml = cubeTest.xmlFromSVGFile("templates/cube.svg");
-						
-		XMLDocument readCubeXML =(new XMLDocument()).loadXMLString(xml);
-		assertTrue(readCubeXML.match("//tspan[contains(text(),\"Comment sortir du cours plus tot\")]"));
-				
-	}
 
 	@Test
-	public void unCubeAvecDeuxFaces() throws Exception {
-		Cube cubeDoubleFace = (new Cube()).addFace("Test1", "Test2");
-		
-		assertEquals(cubeDoubleFace.nombreFace(), 2);
-		
+	public void twoCubeWithTwoDifferentFaceShouldNotBeEqual() {
+		Cube cubeGit = (new Cube()).addFace("Git").addFace("Hub");
+		Cube cubeSVN = (new Cube()).addFace("SVN").addFace("toto");
+		assertFalse(cubeGit.equals(cubeSVN));
 	}
 }
