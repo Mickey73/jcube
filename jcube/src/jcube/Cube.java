@@ -36,20 +36,13 @@ public class Cube {
 		return doc.asXMLString();
 	}
 
-//	public Cube addAstuce(String string) {
-//		
-//		return null;
-//	}
-//
-//	public Cube retourneAstuceComplete() {
-//		
-//		return null;
-//	}
-//
-//	public Cube addDescription(String string) {
-//		
-//		return null;
-//	}
+	public Astuce retourneAstuceComplete() {
+		
+		Cube otherCube = new Cube();
+		return otherCube.faceOne.donnerAstuce();
+		
+	}
+
 
 	
 
