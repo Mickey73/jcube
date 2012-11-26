@@ -1,5 +1,9 @@
 package jcube;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 import org.w3c.dom.Element;
@@ -30,5 +34,17 @@ public class Cube {
 						
 		return doc.asXMLString();
 	}
+
+	public Cube addAstuce(String string) {
+		
+		return null;
+	}
+
+	public Object retourneAstuceComplete() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 
 }

@@ -30,5 +30,14 @@ public class CubeFromOneLineTextFile {
 		assertTrue(readCubeXML.match("//tspan[contains(text(),\"Comment sortir du cours plus tot\")]"));
 				
 	}
+	
+	@Test
+	public void laFaceContientElleUneAstuceComplete() throws Exception{
+		Cube cubeFaceComplete = (new Cube()).addFace("Comment sortir du cours plus tot")
+											.addAstuce("C'est impossible")
+											.addDescription("Jamais arrivé");	
+		assertEquals(cubeFaceComplete ,this.actualCube.retourneAstuceComplete());
+		
+	}
 
 }
