@@ -9,7 +9,8 @@ import java.io.IOException;
 import org.w3c.dom.Element;
 
 public class Cube {
-	private String faceOne;
+	
+	Face faceOne =new Face();
 
 
 	public static Cube fromTextFile(String filepath) throws IOException {
@@ -17,7 +18,7 @@ public class Cube {
 	}
 
 	public Cube addFace(String string) {
-		this.faceOne = string;
+		this.faceOne.donnerTitreFace(string);
 		return this;
 	}
 
@@ -30,20 +31,25 @@ public class Cube {
 		
 		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
 		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
-		blocNode.setTextContent(faceOne);
+		blocNode.setTextContent(faceOne.lireTitreFace());
 						
 		return doc.asXMLString();
 	}
 
-	public Cube addAstuce(String string) {
-		
-		return null;
-	}
-
-	public Object retourneAstuceComplete() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+//	public Cube addAstuce(String string) {
+//		
+//		return null;
+//	}
+//
+//	public Cube retourneAstuceComplete() {
+//		
+//		return null;
+//	}
+//
+//	public Cube addDescription(String string) {
+//		
+//		return null;
+//	}
 
 	
 
