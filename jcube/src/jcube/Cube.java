@@ -35,18 +35,19 @@ public class Cube {
 		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
 		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
 		blocNode.setTextContent(faceOne.lireTitreFace());
-			
+		blocNode = doc.getFirstNodeFromXPath("//text[contains(text(), \"$text1\")]");
+		blocNode.setTextContent(faceOne.astuce.lireDescriptionAstuce());
+		//System.out.println(doc.asXMLString());
 		return doc.asXMLString();
 	}
 
-	public String xmlFromSVGFile2(String string) throws Exception {
-		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
-		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
-		blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$text1\")]");
-		blocNode.setTextContent(faceOne.astuce.lireNomAstuce());
-		blocNode.setTextContent(faceOne.astuce.lireDescriptionAstuce());
-		
-		return null;
-	}
+//	public String xmlFromSVGFile2(String string) throws Exception {
+//		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
+//		Element blocNode = doc.getFirstNodeFromXPath("//text[contains(text(), \"$text1\")]");
+//		blocNode.setTextContent(faceOne.astuce.lireNomAstuce());
+////		blocNode.setTextContent(faceOne.astuce.lireDescriptionAstuce());
+//
+//		return doc.asXMLString();
+//	}
 
 }

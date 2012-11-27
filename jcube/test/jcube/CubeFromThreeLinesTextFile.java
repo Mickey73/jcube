@@ -17,9 +17,7 @@ public class CubeFromThreeLinesTextFile {
 	@Before
 	public void loadCubeFromOneLineCubeDoText() throws Exception {
 		this.actualCube = Cube.fromTextFile("templates/three-line-cube.txt");
-//		String xml = actualCube.xmlFromSVGFile("templates/cube.svg");						
-//		XMLDocument readCubeXML =(new XMLDocument()).loadXMLString(xml);
-//			
+			
 	}
 
 	@Test
@@ -47,11 +45,5 @@ public class CubeFromThreeLinesTextFile {
 		assertTrue(readCubeXML.match("//text[contains(text(),\"C'est impossible\")][preceding-sibling:text/tspan[contains(text(),\"Comment sortir du cours plus tot\")]]"));
 	}
 	
-	@Test
-	public void leFichierSVGContientIlUneDescriptionAstuce() throws Exception {
-		String xml = actualCube.xmlFromSVGFile("templates/cube.svg");						
-		XMLDocument readCubeXML =(new XMLDocument()).loadXMLString(xml);
-		assertTrue(readCubeXML.match("//tspan[contains(text(),\"Jamais arrivé\")]"));
-			
-	}
+
 }

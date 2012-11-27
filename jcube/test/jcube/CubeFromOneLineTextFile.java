@@ -31,6 +31,11 @@ public class CubeFromOneLineTextFile {
 				
 	}
 	
+	@Test
+	public void testFinal(){
+		Cube cubeTest = new Cube("toto");
+	
+	}
 	
 	
 	
