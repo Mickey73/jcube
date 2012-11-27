@@ -14,11 +14,6 @@ public class Face {
 		this.titreFace = titreFace;
 	}
 	
-	public Astuce donnerAstuce() {
-		return astuce;
-				
-	}
-
 		
 	public boolean equals(Object other) {
 		Face otherFace = (Face)other;

@@ -6,7 +6,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+
 import org.w3c.dom.Element;
+import org.xml.sax.SAXException;
 
 public class Cube {
 	
@@ -32,18 +35,18 @@ public class Cube {
 		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
 		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
 		blocNode.setTextContent(faceOne.lireTitreFace());
-						
+			
 		return doc.asXMLString();
 	}
 
-	public Astuce retourneAstuceComplete() {
+	public String xmlFromSVGFile2(String string) throws Exception {
+		XMLDocument doc = (new XMLDocument()).loadXMLFile(string);
+		Element blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$BLOCK1\")]");
+		blocNode = doc.getFirstNodeFromXPath("//tspan[contains(text(), \"$text1\")]");
+		blocNode.setTextContent(faceOne.astuce.lireNomAstuce());
+		blocNode.setTextContent(faceOne.astuce.lireDescriptionAstuce());
 		
-		Cube otherCube = new Cube();
-		return otherCube.faceOne.donnerAstuce();
-		
+		return null;
 	}
-
-
-	
 
 }

@@ -32,16 +32,7 @@ public class CubeFromOneLineTextFile {
 	}
 	
 	
-	@Test
-	public void laFaceContientElleUneAstuceComplete() throws Exception{
-		Cube cubeFaceComplete = (new Cube());
-		cubeFaceComplete.faceOne.donnerTitreFace("Comment sortir du cours plus tot");
-		cubeFaceComplete.faceOne.astuce.donnerNomAstuce("C'est impossible");
-		cubeFaceComplete.faceOne.astuce.donnerDescriptionAstuce("Jamais arrivé");
-							
-		assertEquals(cubeFaceComplete ,this.actualCube.retourneAstuceComplete());
-		
-	}
+	
 	
 
 }
