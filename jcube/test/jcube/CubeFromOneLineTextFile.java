@@ -13,7 +13,7 @@ public class CubeFromOneLineTextFile {
 
 	@Before
 	public void loadCubeFromOneLineCubeDoText() throws Exception {
-		this.actualCube = Cube.fromTextFile("templates/one-line-cube.txt");
+		this.actualCube = Cube.fromTextFileOneLine("templates/one-line-cube.txt");
 			
 	}
 	

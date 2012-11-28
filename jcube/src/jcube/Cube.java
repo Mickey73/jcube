@@ -10,11 +10,11 @@ public class Cube {
 	Face faceOne =new Face();
 
 
-	public static Cube fromTextFile(String filepath) throws IOException {
+	public static Cube fromTextFileOneLine(String filepath) throws IOException {
 		return (new CubeTextFile(filepath)).newCube();
 	}
-	public static Cube fromTextFile2(String filepath) throws IOException {
-		return (new CubeTextFile(filepath)).newCube2();
+	public static Cube fromTextFileThreeLines(String filepath) throws IOException {
+		return (new CubeTextFile(filepath)).newCubeFaceComplete();
 	}
 
 	public Cube addFace(String string) {
@@ -46,8 +46,9 @@ public class Cube {
 		blocNode.setTextContent(faceOne.lireTitreFace());
 		blocNode = doc.getFirstNodeFromXPath("//text[contains(text(), \"$text1\")]");
 		blocNode.setTextContent(faceOne.astuce.lireNomAstuce() + ": " + faceOne.astuce.lireDescriptionAstuce());
-		System.out.println(doc.asXMLString());
 		return doc.asXMLString();
 	}
+	
+
 	
 }
