@@ -37,8 +37,19 @@ public class Cube {
 		blocNode.setTextContent(faceOne.lireTitreFace());
 		blocNode = doc.getFirstNodeFromXPath("//text[contains(text(), \"$text1\")]");
 		blocNode.setTextContent(faceOne.astuce.lireDescriptionAstuce());
-		//System.out.println(doc.asXMLString());
 		return doc.asXMLString();
+	}
+	
+	public Cube addNomAstuce (String string) {
+		this.faceOne.astuce.donnerNomAstuce(string);
+		return this;
+		
+	}
+	
+	public Cube addDescriptionAstuce (String string) {
+		this.faceOne.astuce.donnerDescriptionAstuce(string);
+		return this;
+		
 	}
 
 //	public String xmlFromSVGFile2(String string) throws Exception {

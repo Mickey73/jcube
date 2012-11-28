@@ -20,14 +20,4 @@ public class CubeTextFile {
 		return cube;
 	}
 
-	
-	public Cube newCube(String string) throws IOException {
-		Cube cube = new Cube();
-		BufferedReader reader = new BufferedReader(new FileReader(new File(this.filepath)));
-		cube.addFace(reader.readLine().substring(2));
-		cube.faceOne.astuce.donnerNomAstuce((reader.readLine().substring(3)));
-		reader.close();
-		return cube;
-	}
-
 }

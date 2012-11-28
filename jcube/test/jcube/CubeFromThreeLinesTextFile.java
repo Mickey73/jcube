@@ -40,9 +40,11 @@ public class CubeFromThreeLinesTextFile {
 	
 	@Test
 	public void leFichierSVGContientIlUnTitreAstuce() throws Exception {
+		Cube expectedCube = (new Cube()).addFace("Comment sortir du cours plus tot");
+		expectedCube.addNomAstuce("C'est impossible").addDescriptionAstuce("Jamais arrivé");
 		String xml = actualCube.xmlFromSVGFile("templates/cube.svg");						
 		XMLDocument readCubeXML =(new XMLDocument()).loadXMLString(xml);
-		assertTrue(readCubeXML.match("//text[contains(text(),\"C'est impossible\")][preceding-sibling:text/tspan[contains(text(),\"Comment sortir du cours plus tot\")]]"));
+		assertTrue(readCubeXML.match("//text[contains(text(),\"impossible\")]"));//[preceding-sibling:text/tspan[contains(text(),\"Comment sortir du cours plus tot\")]]"));
 	}
 	
 
