@@ -8,7 +8,7 @@ import java.io.IOException;
 public class CubeTextFile {
 	private String filepath;
 	Cube cube = new Cube();
-
+	
 	public CubeTextFile(String filepath) {
 		this.filepath = filepath;
 	}

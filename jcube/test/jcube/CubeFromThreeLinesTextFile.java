@@ -30,10 +30,8 @@ public class CubeFromThreeLinesTextFile {
 	@Test
 	public void laFaceContientElleUneAstuceComplete() throws Exception{
 		assertEquals(cubeFaceComplete ,this.actualCube);
-		
 	}
-	
-		
+			
 	@Test
 	public void leFichierSVGContientIlUnTitreDeFace() throws Exception {
 		assertTrue(readCubeXML.match("//tspan[contains(text(),\"Comment sortir du cours plus tot\")]"));
