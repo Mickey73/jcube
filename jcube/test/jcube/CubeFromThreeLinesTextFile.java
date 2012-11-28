@@ -44,7 +44,7 @@ public class CubeFromThreeLinesTextFile {
 	
 	@Test
 	public void leFichierSVGContientIlUneDescriptionAstuce() throws Exception {
-			assertTrue(readCubeXML.match("//text[contains(text(),\"Jamais arrivé\")]"));
+		assertTrue(readCubeXML.match("//text[contains(text(),\"Jamais arrivé\")]"));
 	}
 	
 

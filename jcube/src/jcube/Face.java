@@ -13,8 +13,7 @@ public class Face {
 	public void donnerTitreFace(String titreFace) {
 		this.titreFace = titreFace;
 	}
-	
-		
+			
 	public boolean equals(Object other) {
 		Face otherFace = (Face)other;
 		return this.lireTitreFace().equals(otherFace.lireTitreFace());
