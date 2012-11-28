@@ -1,14 +1,9 @@
 package jcube;
 
 import static org.junit.Assert.*;
-
-import java.io.IOException;
-
-import javax.xml.parsers.ParserConfigurationException;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.xml.sax.SAXException;
+
 
 public class CubeFromThreeLinesTextFile {
 	
@@ -16,7 +11,8 @@ public class CubeFromThreeLinesTextFile {
 
 	@Before
 	public void loadCubeFromOneLineCubeDoText() throws Exception {
-		this.actualCube = Cube.fromTextFile("templates/three-line-cube.txt");
+		this.actualCube = Cube.fromTextFile2("templates/three-line-cube.txt");
+		
 			
 	}
 
